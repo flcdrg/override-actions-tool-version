@@ -21,7 +21,7 @@ jobs:
         run: az version
         
       - name: uninstall existing cli
-        run: start /wait msiexec /q /x "{EACBF755-226E-46F6-8645-B080DC67883D}"
+        run: start /wait msiexec -q -x {EACBF755-226E-46F6-8645-B080DC67883D}
 
       # Runs a set of commands using the runners shell
       - name: install new version
