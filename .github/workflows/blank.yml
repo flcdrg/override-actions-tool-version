@@ -17,11 +17,12 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Runs a single command using the runners shell
-      - name: Exising version
+      - name: Existing version
         run: az version
         
       - name: uninstall existing cli
         run: start /wait msiexec -q -x {EACBF755-226E-46F6-8645-B080DC67883D}
+        shell: cmd
 
       # Runs a set of commands using the runners shell
       - name: install new version
